@@ -35,11 +35,12 @@ public class MeshGenerator : MonoBehaviour {
         Vector3 center = mf.transform.position;
 
         vertices[0] = center;
+        normals[0] = center - transform.forward;
 
         for ( int i = 1; i < vertexCount; i++ ) {
             float angle = anglePerVertex * i;
             vertices[i] = new Vector2( Mathf.Sin( angle ), Mathf.Cos( angle ) ) * radius;
-            normals[i] = vertices[i] + ( vertices[i] - center ).normalized;
+            normals[i] = vertices[i] - transform.forward;
         }
 
         for ( int i = 0; i < detail; i++ ) {
@@ -69,6 +70,11 @@ public class MeshGenerator : MonoBehaviour {
 
         for ( int i = 0; i < vertexCount; i++ ) {
             Handles.Label( vertices[i], i.ToString(), EditorStyles.boldLabel );
+        }
+
+        Gizmos.color = Color.blue;
+        for ( int i = 0; i < vertexCount; i++ ) {
+            Gizmos.DrawLine( vertices[i], normals[i] );
         }
     }
 }
