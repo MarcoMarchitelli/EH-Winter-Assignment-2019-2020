@@ -61,6 +61,7 @@ public class MeshGenerator : MonoBehaviour {
         mesh.normals = normals;
 
         mf.mesh = mesh;
+
         OnMeshGeneration.Invoke( mesh );
     }
 
