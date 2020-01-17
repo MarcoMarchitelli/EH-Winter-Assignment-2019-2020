@@ -2,6 +2,9 @@
 using UnityEditor;
 
 public class MeshGenerator : MonoBehaviour {
+    [Header("Data")]
+    public MeshVar meshVar;
+
     [Header("References")]
     public MeshFilter mf;
 
@@ -11,19 +14,21 @@ public class MeshGenerator : MonoBehaviour {
     public bool autoGen;
     public bool gizmos;
 
-    [Header("Events")]
-    [Tooltip("Passes the generated mesh")]
-    public UnityMeshEvent OnMeshGeneration;
-
     private Vector3[] vertices;
     private int[] tris;
     private Vector3[] normals;
-    private Vector2[] uvs;
+    //private Vector2[] uvs;
     private int vertexCount;
 
     public void GenerateMesh () {
-        Mesh mesh = new Mesh();
-        mesh.name = "Blob";
+        if ( meshVar.value == null ) {
+            meshVar.value = Instantiate<Mesh>( new Mesh() );
+            meshVar.value.name = "Blob";
+        }
+        else {
+            meshVar.value.Clear();
+        }
+
 
         float anglePerVertex = Mathf.PI * 2 / detail;
         vertexCount = detail + 1;
@@ -56,13 +61,11 @@ public class MeshGenerator : MonoBehaviour {
             }
         }
 
-        mesh.vertices = vertices;
-        mesh.triangles = tris;
-        mesh.normals = normals;
+        meshVar.value.vertices = vertices;
+        meshVar.value.triangles = tris;
+        meshVar.value.normals = normals;
 
-        mf.mesh = mesh;
-
-        OnMeshGeneration.Invoke( mesh );
+        mf.mesh = meshVar.value;
     }
 
     private void OnDrawGizmos () {
