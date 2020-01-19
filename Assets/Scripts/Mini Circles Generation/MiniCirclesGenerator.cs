@@ -22,6 +22,7 @@ public class MiniCirclesGenerator : MonoBehaviour {
 
     private Transform[] circles;
 
+    #region Privates
     private void GenerateMesh () {
         if ( meshVar.value == null ) {
             meshVar.value = Instantiate<Mesh>( new Mesh() );
@@ -90,6 +91,7 @@ public class MiniCirclesGenerator : MonoBehaviour {
             Vector3 pos = smr.transform.position + new Vector3( Mathf.Cos(angle), Mathf.Sin(angle), 0 ) * miniRadius;
             GameObject circle = new GameObject( "Circle Collider " + i );
             circle.AddComponent<CircleCollider2D>().radius = circlesRadius;
+            circle.AddComponent<Rigidbody2D>().gravityScale = 0;
             circle.transform.position = pos;
             circle.transform.parent = smr.transform;
             circles[i] = circle.transform;
@@ -102,18 +104,16 @@ public class MiniCirclesGenerator : MonoBehaviour {
         for ( int j = 0; j < vertexCount; j++ ) {
             SetClosestBones( j );
         }
-    }
-
-    struct BoneDistance {
-        public int boneIndex;
-        public float distance;
+        meshVar.value.boneWeights = boneWeights;
     }
 
     //TODO: make first 4 bones NOT just first.
     private void SetClosestBones ( int vertexIndex ) {
         Vector3 vertex = vertices[vertexIndex];
+
         float distance = Vector3.Distance(vertex, circles[0].position);
         int currBoneIndex = 0;
+
         for ( int i = 1; i < circlesCount; i++ ) {
             float newDistance = Vector3.Distance(vertex, circles[i].position);
             if ( newDistance < distance ) {
@@ -121,9 +121,11 @@ public class MiniCirclesGenerator : MonoBehaviour {
                 currBoneIndex = i;
             }
         }
-        meshVar.value.boneWeights[vertexIndex].boneIndex0 = currBoneIndex;
-        meshVar.value.boneWeights[vertexIndex].weight0 = 1;
-    }
+
+        boneWeights[vertexIndex].boneIndex0 = currBoneIndex;
+        boneWeights[vertexIndex].weight0 = 1 / distance;
+    } 
+    #endregion
 
     public void Generate () {
         GenerateMesh();
