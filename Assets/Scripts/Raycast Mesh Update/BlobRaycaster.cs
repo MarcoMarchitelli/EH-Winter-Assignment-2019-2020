@@ -16,7 +16,7 @@ public class BlobRaycaster : MonoBehaviour {
     [Range(0,360)] public float maxNeighbourAngle;
     [MinCustom(0.1f)] public float adjustmentSpeed = 5;
 
-    private float maxPointsDistance;
+    private float minPointsDistance;
 
     private void SetPointsNeighbour () {
         for ( int i = 0; i < pointsCount; i++ ) {
@@ -40,7 +40,7 @@ public class BlobRaycaster : MonoBehaviour {
 
         SetPointsNeighbour();
 
-        maxPointsDistance = Vector2.Distance( pointArrayVar.value[0].position, pointArrayVar.value[1].position );
+        minPointsDistance = Vector2.Distance( pointArrayVar.value[0].position, pointArrayVar.value[1].position );
     }
 
     #region Monos
@@ -74,10 +74,10 @@ public class BlobRaycaster : MonoBehaviour {
             for ( int j = 0; j < pointsCount; j++ ) {
                 Point p2 = pointArrayVar.value[j];
                 if ( p == p2 )
-                    return;
+                    continue;
                 float dist = Vector2.Distance(p.position, p2.position);
-                if ( dist < maxPointsDistance ) {
-                    Vector2 pos = (p2.position - p.position).normalized * maxPointsDistance;
+                if ( dist < minPointsDistance ) {
+                    Vector2 pos = (Vector2)pointsContainer.position + (p2.position - p.position).normalized * minPointsDistance;
                     p.position = Vector2.Lerp( p.position, pos, adjustmentSpeed * Time.deltaTime );
                 }
             }

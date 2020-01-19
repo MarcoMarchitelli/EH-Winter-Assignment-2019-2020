@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using Unity.Collections;
 
 public class MiniCirclesGenerator : MonoBehaviour {
     [Header("Data")]
@@ -6,6 +8,7 @@ public class MiniCirclesGenerator : MonoBehaviour {
 
     [Header("Refs")]
     public SkinnedMeshRenderer smr;
+    public Rigidbody2D blobRb2D;
 
     [Header("Params")]
     [Range(3,64)] public int meshDetail = 32;
@@ -17,6 +20,8 @@ public class MiniCirclesGenerator : MonoBehaviour {
     private Vector3[] vertices;
     private Vector3[] normals;
     private BoneWeight[] boneWeights;
+    private Matrix4x4[] bindPoses;
+    //private byte[] bonesPerVertex;
     private int[] tris;
     private int vertexCount;
 
@@ -24,6 +29,8 @@ public class MiniCirclesGenerator : MonoBehaviour {
 
     #region Privates
     private void GenerateMesh () {
+        circlesCount = 4;
+
         if ( meshVar.value == null ) {
             meshVar.value = Instantiate<Mesh>( new Mesh() );
             meshVar.value.name = "Blob";
@@ -92,19 +99,34 @@ public class MiniCirclesGenerator : MonoBehaviour {
             GameObject circle = new GameObject( "Circle Collider " + i );
             circle.AddComponent<CircleCollider2D>().radius = circlesRadius;
             circle.AddComponent<Rigidbody2D>().gravityScale = 0;
+            circle.AddComponent<SpringJoint2D>().connectedBody = blobRb2D;
+            circle.AddComponent<DistanceJoint2D>();
             circle.transform.position = pos;
             circle.transform.parent = smr.transform;
+            circle.transform.localRotation = Quaternion.identity;
             circles[i] = circle.transform;
+        }
+
+        for ( int i = 0; i < circlesCount; i++ ) {
+            int nextIndex = i + 1 < circlesCount ? i + 1 : 0;
+            circles[i].GetComponent<DistanceJoint2D>().connectedBody = circles[nextIndex].GetComponent<Rigidbody2D>();
         }
     }
 
     private void CreateBones () {
         boneWeights = new BoneWeight[vertexCount];
+        bindPoses = new Matrix4x4[circlesCount];
+        //bonesPerVertex = new byte[vertexCount];
+        //for ( int i = 0; i < vertexCount; i++ ) {
+        //    bonesPerVertex[i] = ( byte ) circlesCount;
+        //}
         smr.bones = circles;
         for ( int j = 0; j < vertexCount; j++ ) {
             SetClosestBones( j );
         }
+        meshVar.value.bindposes = bindPoses;
         meshVar.value.boneWeights = boneWeights;
+        //meshVar.value.SetBoneWeights( new NativeArray<byte>( bonesPerVertex, Allocator.Temp ), new NativeArray<BoneWeight1>( boneWeights, Allocator.Temp ) );
     }
 
     //TODO: make first 4 bones NOT just first.
@@ -112,19 +134,25 @@ public class MiniCirclesGenerator : MonoBehaviour {
         Vector3 vertex = vertices[vertexIndex];
 
         float distance = Vector3.Distance(vertex, circles[0].position);
-        int currBoneIndex = 0;
+        boneWeights[vertexIndex].boneIndex0 = 0;
+        boneWeights[vertexIndex].weight0 = Mathf.Clamp01( 1 / distance );
+        bindPoses[0] = smr.bones[0].worldToLocalMatrix * smr.transform.localToWorldMatrix;
 
-        for ( int i = 1; i < circlesCount; i++ ) {
-            float newDistance = Vector3.Distance(vertex, circles[i].position);
-            if ( newDistance < distance ) {
-                distance = newDistance;
-                currBoneIndex = i;
-            }
-        }
+        distance = Vector3.Distance(vertex, circles[1].position);
+        boneWeights[vertexIndex].boneIndex1 = 1;
+        boneWeights[vertexIndex].weight1 = Mathf.Clamp01(1 / distance);
+        bindPoses[1] = smr.bones[1].worldToLocalMatrix * smr.transform.localToWorldMatrix;
 
-        boneWeights[vertexIndex].boneIndex0 = currBoneIndex;
-        boneWeights[vertexIndex].weight0 = 1 / distance;
-    } 
+        distance = Vector3.Distance(vertex, circles[2].position);
+        boneWeights[vertexIndex].boneIndex2 = 2;
+        boneWeights[vertexIndex].weight2 = Mathf.Clamp01( 1 / distance );
+        bindPoses[2] = smr.bones[2].worldToLocalMatrix * smr.transform.localToWorldMatrix;
+
+        distance = Vector3.Distance( vertex, circles[3].position );
+        boneWeights[vertexIndex].boneIndex3 = 3;
+        boneWeights[vertexIndex].weight3 = Mathf.Clamp01( 1 / distance );
+        bindPoses[3] = smr.bones[3].worldToLocalMatrix * smr.transform.localToWorldMatrix;
+    }
     #endregion
 
     public void Generate () {
@@ -135,5 +163,9 @@ public class MiniCirclesGenerator : MonoBehaviour {
         CreateCircles();
 
         CreateBones();
+    }
+
+    private void Start () {
+        Generate();
     }
 }

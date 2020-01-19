@@ -293,6 +293,7 @@ MonoBehaviour:
   rayLength: 0.1
   gravity: 2
   maxNeighbourAngle: 0
+  adjustmentSpeed: 2
 --- !u!4 &359054774
 Transform:
   m_ObjectHideFlags: 0
