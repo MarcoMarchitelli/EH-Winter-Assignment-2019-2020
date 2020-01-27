@@ -3,7 +3,7 @@ using System.Collections;
 using Unity.Collections;
 
 public class MiniCirclesGenerator : MonoBehaviour {
-    [Header("Data")]
+    [Header( "Data" )]
     public MeshVar meshVar;
 
     [Header("Refs")]
@@ -138,12 +138,12 @@ public class MiniCirclesGenerator : MonoBehaviour {
         boneWeights[vertexIndex].weight0 = Mathf.Clamp01( 1 / distance );
         bindPoses[0] = smr.bones[0].worldToLocalMatrix * smr.transform.localToWorldMatrix;
 
-        distance = Vector3.Distance(vertex, circles[1].position);
+        distance = Vector3.Distance( vertex, circles[1].position );
         boneWeights[vertexIndex].boneIndex1 = 1;
-        boneWeights[vertexIndex].weight1 = Mathf.Clamp01(1 / distance);
+        boneWeights[vertexIndex].weight1 = Mathf.Clamp01( 1 / distance );
         bindPoses[1] = smr.bones[1].worldToLocalMatrix * smr.transform.localToWorldMatrix;
 
-        distance = Vector3.Distance(vertex, circles[2].position);
+        distance = Vector3.Distance( vertex, circles[2].position );
         boneWeights[vertexIndex].boneIndex2 = 2;
         boneWeights[vertexIndex].weight2 = Mathf.Clamp01( 1 / distance );
         bindPoses[2] = smr.bones[2].worldToLocalMatrix * smr.transform.localToWorldMatrix;
