@@ -2,9 +2,6 @@
 using System;
 
 public class BlobPhysics : MonoBehaviour {
-    [Header("Data")]
-    public TransformArrayVar blobPhysicsPoints;
-
     [Header("Parameters")]
     [Range(4,64)] public int detail;
     [Range(0.1f,10)] public float radius;
@@ -18,6 +15,8 @@ public class BlobPhysics : MonoBehaviour {
     private Rigidbody2D[] secondaryRbs;
     private float angleRadians;
 
+    public static Transform[] points;
+
     public void Generate () {
         DestroyChildren();
         rbsContainer = new GameObject( "Blob Physics" );
@@ -27,14 +26,16 @@ public class BlobPhysics : MonoBehaviour {
         rbsContainer.AddComponent<CircleCollider2D>().radius = mainColliderRadius;
 
         angleRadians = Mathf.PI * 2 / detail;
-        blobPhysicsPoints.value = new Transform[detail];
-        secondaryRbs = new Rigidbody2D[detail];
+        points = new Transform[detail + 1];
+        points[0] = rbsContainer.transform;
+        secondaryRbs = new Rigidbody2D[detail + 1];
         for ( int i = 0; i < detail; i++ ) {
             CreateSecondaryRB( i );
         }
         for ( int i = 0; i < detail; i++ ) {
             SetSecondarySprings( i );
         }
+        print( points.Length );
     }
 
     private void DestroyChildren () {
@@ -76,18 +77,18 @@ public class BlobPhysics : MonoBehaviour {
 
         srb.AddComponent<CircleCollider2D>().radius = secondaryCollidersRaius;
 
-        blobPhysicsPoints.value[i] = srb.transform;
-        secondaryRbs[i] = rb;
+        points[i+1] = srb.transform;
+        secondaryRbs[i+1] = rb;
     }
 
     private void SetSecondarySprings ( int i ) {
         int targetIndex = i + 1 > detail - 1 ? 0 : i + 1;
 
-        SpringJoint2D sj = secondaryRbs[i].gameObject.AddComponent<SpringJoint2D>();
+        SpringJoint2D sj = secondaryRbs[i+1].gameObject.AddComponent<SpringJoint2D>();
         sj.autoConfigureDistance = true;
         sj.dampingRatio = dampen;
         sj.frequency = frequency;
-        sj.connectedBody = secondaryRbs[targetIndex];
+        sj.connectedBody = secondaryRbs[targetIndex + 1];
         sj.enableCollision = true;
     }
 }

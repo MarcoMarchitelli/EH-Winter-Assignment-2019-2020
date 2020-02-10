@@ -1,18 +1,20 @@
 ﻿using System.Linq;
 using UnityEngine;
+using System;
 
 public class BlobGraphics : MonoBehaviour {
     [Header("Data")]
-    public TransformArrayVar blobPhysicsPoints;
     public MeshVar blobMesh;
 
     [Header("References")]
     public SkinnedMeshRenderer smr;
     public Transform rootBonePositionReference;
+    //[SerializeField] private GameObject rootBone = default;
 
     [Header("Parameters")]
     [Range(3,64)] public int detail;
     [Range(.1f,10)] public float radius;
+    [Range(0,1)] public float weightBase;
 
     private Vector3[] vertices;
     private Vector3[] normals;
@@ -20,14 +22,13 @@ public class BlobGraphics : MonoBehaviour {
     private Matrix4x4[] bindPoses;
     private int[] tris;
     private int vertexCount;
-    private GameObject rootBone;
 
-    private void Update () {
-        //rotate root bone
-        rootBone.transform.position = rootBonePositionReference.position;
-        float angle = Vector3.Angle(rootBone.transform.position, blobPhysicsPoints.value[0].position);
-        rootBone.transform.localEulerAngles = new Vector3( 0, 0, angle );
-    }
+    //private void Update () {
+    //    //rotate root bone
+    //    rootBone.transform.position = rootBonePositionReference.position;
+    //    float angle = Vector3.Angle(rootBone.transform.position, BlobPhysics.points[0].position);
+    //    rootBone.transform.localEulerAngles = new Vector3( 0, 0, angle );
+    //}
 
     public void GenerateMesh () {
         blobMesh.value = new Mesh();
@@ -75,13 +76,19 @@ public class BlobGraphics : MonoBehaviour {
 
     private void CreateBones () {
         boneWeights = new BoneWeight[vertexCount];
-        bindPoses = new Matrix4x4[blobPhysicsPoints.value.Length];
+        bindPoses = new Matrix4x4[BlobPhysics.points.Length];
 
-        CreateRootBone();
-        smr.bones = blobPhysicsPoints.value;
+        smr.bones = BlobPhysics.points;
+
+        boneWeights[0].boneIndex0 = 0;
+        boneWeights[0].weight0 = 1;
 
         for ( int j = 1; j < vertexCount; j++ ) {
             SetClosestBones( j );
+        }
+
+        for ( int i = 0; i < bindPoses.Length; i++ ) {
+            bindPoses[i] = smr.bones[i].worldToLocalMatrix * smr.transform.localToWorldMatrix;
         }
 
         blobMesh.value.bindposes = bindPoses;
@@ -97,42 +104,36 @@ public class BlobGraphics : MonoBehaviour {
                 DestroyImmediate( transform.GetChild( 0 ).gameObject );
             }
 
-
-
         GameObject rootBone = new GameObject("Root Bone");
+        rootBone.transform.SetParent( transform );
         smr.rootBone = rootBone.transform;
     }
 
     private void SetClosestBones ( int vertexIndex ) {
         Vector3 vertex = vertices[vertexIndex];
+        Vector3 worldVertex = smr.transform.TransformPoint( vertex );
 
-        blobPhysicsPoints.value.OrderBy( a => ( a.position - vertex ).sqrMagnitude );
+        //order physics points based on distance.
+        var bonesRefs = BlobPhysics.points.OrderBy( a => ( worldVertex - a.position).magnitude ).ToArray();
 
-        int currentIndex = 0;
-        Transform currBone = blobPhysicsPoints.value[currentIndex];
+        float GetWeight ( Transform bone, float mul = 1 ) {
+            return 1 - Mathf.Clamp01( ( worldVertex - bone.position ).magnitude / weightBase ) * mul;
+        }
 
-        float minDist = (vertex - currBone.position).sqrMagnitude;
+        Transform currBone = bonesRefs[0];
+        boneWeights[vertexIndex].boneIndex0 = Array.IndexOf( BlobPhysics.points, currBone );
+        boneWeights[vertexIndex].weight0 = GetWeight( currBone );
 
-        boneWeights[vertexIndex].boneIndex0 = currentIndex;
-        boneWeights[vertexIndex].weight0 = Mathf.Clamp01( minDist / ( currBone.position - vertex ).sqrMagnitude );
-        bindPoses[currentIndex] = smr.bones[currentIndex].worldToLocalMatrix * smr.transform.localToWorldMatrix;
+        //currBone = bonesRefs[1];
+        //boneWeights[vertexIndex].boneIndex1 = Array.IndexOf( BlobPhysics.points, currBone );
+        //boneWeights[vertexIndex].weight1 = GetWeight( currBone, .9f );
 
-        currentIndex = 1;
-        currBone = blobPhysicsPoints.value[currentIndex];
-        boneWeights[vertexIndex].boneIndex1 = currentIndex;
-        boneWeights[vertexIndex].weight1 = Mathf.Clamp01( minDist / ( currBone.position - vertex ).sqrMagnitude );
-        bindPoses[currentIndex] = smr.bones[currentIndex].worldToLocalMatrix * smr.transform.localToWorldMatrix;
+        //currBone = bonesRefs[2];
+        //boneWeights[vertexIndex].boneIndex2 = Array.IndexOf( BlobPhysics.points, currBone );
+        //boneWeights[vertexIndex].weight2 = GetWeight( currBone );
 
-        currentIndex = 2;
-        currBone = blobPhysicsPoints.value[currentIndex];
-        boneWeights[vertexIndex].boneIndex2 = currentIndex;
-        boneWeights[vertexIndex].weight2 = Mathf.Clamp01( minDist / ( currBone.position - vertex ).sqrMagnitude );
-        bindPoses[currentIndex] = smr.bones[currentIndex].worldToLocalMatrix * smr.transform.localToWorldMatrix;
-
-        currentIndex = 3;
-        currBone = blobPhysicsPoints.value[currentIndex];
-        boneWeights[vertexIndex].boneIndex3 = currentIndex;
-        boneWeights[vertexIndex].weight3 = Mathf.Clamp01( minDist / ( currBone.position - vertex ).sqrMagnitude );
-        bindPoses[currentIndex] = smr.bones[currentIndex].worldToLocalMatrix * smr.transform.localToWorldMatrix;
+        //currBone = bonesRefs[3];
+        //boneWeights[vertexIndex].boneIndex3 = Array.IndexOf( BlobPhysics.points, currBone );
+        //boneWeights[vertexIndex].weight3 = GetWeight( currBone );
     }
 }
