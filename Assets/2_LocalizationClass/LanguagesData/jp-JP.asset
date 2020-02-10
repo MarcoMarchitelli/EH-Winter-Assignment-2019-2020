@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: jp-JP
   m_EditorClassIdentifier: 
   languageCode: jp-JP
+  iso: jp

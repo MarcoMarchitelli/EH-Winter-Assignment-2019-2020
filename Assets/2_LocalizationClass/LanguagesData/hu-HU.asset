@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: hu-HU
   m_EditorClassIdentifier: 
   languageCode: hu-HU
+  iso: hu

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: zh-CN
   m_EditorClassIdentifier: 
   languageCode: zh-CN
+  iso: zh

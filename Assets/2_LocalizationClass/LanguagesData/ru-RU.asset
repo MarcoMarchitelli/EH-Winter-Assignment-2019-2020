@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ru-RU
   m_EditorClassIdentifier: 
   languageCode: ru-RU
+  iso: ru

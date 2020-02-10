@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: pt-PT
   m_EditorClassIdentifier: 
   languageCode: pt-PT
+  iso: pt

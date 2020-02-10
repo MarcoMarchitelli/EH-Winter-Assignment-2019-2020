@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: de-DE
   m_EditorClassIdentifier: 
   languageCode: de-DE
+  iso: de

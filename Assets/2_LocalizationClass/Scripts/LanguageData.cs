@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class LanguageData : ScriptableObject {
     public string languageCode;
+    public string iso;
     public Dictionary< string, string > data;
 }
