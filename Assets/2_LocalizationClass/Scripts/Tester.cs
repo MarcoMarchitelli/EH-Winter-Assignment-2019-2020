@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Tester : MonoBehaviour {
+    public string key;
+
     void Start () {
-        Localizator.Localize( "#TITLE_INVENTORY" );
+        Debug.Log( key.Localize( Random.Range( 0, 100000 ) ) );
     }
 }

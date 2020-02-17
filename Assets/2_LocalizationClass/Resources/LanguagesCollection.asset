@@ -24,3 +24,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6c96dd3d62467f14199299c79451020d, type: 2}
   - {fileID: 11400000, guid: fa15cc9ebf705ed49ae67934afd85692, type: 2}
   fallbackLanguage: {fileID: 11400000, guid: 635d73aa09404d84dbf76fd30d4669b5, type: 2}
+  forcedLanguage: {fileID: 11400000, guid: 635d73aa09404d84dbf76fd30d4669b5, type: 2}

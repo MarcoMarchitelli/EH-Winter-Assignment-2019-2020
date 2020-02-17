@@ -14,3 +14,244 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   languageCode: fr-FR
   iso: fr
+  keys:
+  - '#BTN_OK'
+  - '#BTN_CONFIRM'
+  - '#BTN_CANCEL'
+  - '#BTN_BACK'
+  - '#BTN_START'
+  - '#BTN_SELECT_WEAPON'
+  - '#BTN_SWITCH_WEAPON'
+  - '#BTN_CLOSE'
+  - '#BTN_RETRY'
+  - '#BTN_EXIT'
+  - '#BTN_RESPAWN'
+  - '#TITLE_INVENTORY'
+  - '#SLOT_EMPTY'
+  - '#SLOT_WEAPON'
+  - '#TITLE_INGAMEPAUSE'
+  - '#MENU_NEWGAME'
+  - '#BTN_HELP'
+  - '#MODE_NORMAL'
+  - '#MODE_NIGHTMARE'
+  - '#MENU_LOADGAME'
+  - '#MENU_OPTIONS'
+  - '#MENU_CREDITS'
+  - '#MENU_TITLE_CREATEGAME'
+  - '#MENU_TITLE_LOADGAME'
+  - '#MENU_TITLE_OPTIONS'
+  - '#MENU_TITLE_VIDEO'
+  - '#MENU_TITLE_AUDIO'
+  - '#BTN_QUIT'
+  - '#BTN_QUIT_TO_DESKTOP'
+  - '#MENU_MSG_QUIT'
+  - '#MENU_OPT_VOLUME'
+  - '#MENU_OPT_FULLSCREEN'
+  - '#MENU_OPT_QUALITY'
+  - '#MENU_OPT_RESOLUTION'
+  - '#QUALITY_HIGH'
+  - '#QUALITY_NORMAL'
+  - '#QUALITY_LOW'
+  - '#MENU_VIDEO'
+  - '#MENU_AUDIO'
+  - '#MENU_CONTROLS'
+  - '#MENU_SLOTNEW'
+  - '#HELP_LOADSLOT'
+  - '#BTN_YES'
+  - '#BTN_NO'
+  - '#WARNING_SLOT_OVERWRITE'
+  - '#OPT_ON'
+  - '#OPT_OFF'
+  - '#MENU_TITLE_GAMMA'
+  - '#MENU_OPT_GAMMA'
+  - '#OPT_BRIGHTNESS'
+  - '#OPT_CONTRAST'
+  - '#MENU_OPTION_LANGUAGE'
+  - '#MENU_TITLE_LANGUAGE'
+  - '#LANG_EN'
+  - '#LANG_IT'
+  - '#LANG_DE'
+  - '#LANG_FR'
+  - '#LANG_ES'
+  - '#LANG_RU'
+  - '#LANG_PT'
+  - '#LANG_ZH'
+  - '#LANG_HU'
+  - '#LBL_PLAYINGTIME'
+  - '#HELP_NEWGAME'
+  - '#SKIP_VIDEO'
+  - '#BTN_RESUME'
+  - '#LBL_CYCLE'
+  - '#BTN_SAVE'
+  - '#BTN_APPLY'
+  - '#BTN_REVERT'
+  - '#MENU_OPTION_resolution'
+  - '#MENU_OPTION_fullscreen'
+  - '#MENU_OPTION_VALUE_yes'
+  - '#MENU_OPTION_VALUE_no'
+  - '#MENU_OPTION_profile'
+  - '#MENU_OPTION_VALUE_Low'
+  - '#MENU_OPTION_VALUE_Medium'
+  - '#MENU_OPTION_VALUE_High'
+  - '#MENU_OPTION_VALUE_VeryHigh'
+  - '#MENU_OPTION_VALUE_Ultra'
+  - '#MENU_OPTION_VALUE_Custom'
+  - '#MENU_OPTION_global'
+  - '#MENU_OPTION_volumetricLight'
+  - '#MENU_OPTION_VALUE_on'
+  - '#MENU_OPTION_VALUE_off'
+  - '#MENU_OPTION_motionBlur'
+  - '#MENU_OPTION_dof'
+  - '#MENU_OPTION_posteffect'
+  - '#MENU_OPTION_VALUE_high'
+  - '#MENU_OPTION_VALUE_medium'
+  - '#MENU_OPTION_VALUE_low'
+  - '#MENU_OPTION_antialiasing'
+  - '#MENU_OPTION_shadow'
+  - '#MENU_OPTION_occlusion'
+  - '#MENU_OPTION_bloom'
+  - '#MENU_OPTION_screenreflection'
+  - '#MENU_OPTION_texturequality'
+  - '#MENU_OPTION_vsync'
+  - '#MENU_OPTION_VERIFY'
+  - '#MENU_OPTION_mute'
+  - '#MENU_OPTION_mastervolume'
+  - '#MENU_OPTION_musicvolume'
+  - '#MENU_OPTION_sxvolume'
+  - '#MENU_OPTION_invertlook'
+  - '#MENU_OPTION_disableVibration'
+  - '#MENU_OPTION_gameDifficulty'
+  - '#MENU_OPTION_VALUE_easy'
+  - '#MENU_OPTION_VALUE_normal'
+  - '#MENU_OPTION_VALUE_hard'
+  - '#MENU_OPTION_FAST_COMBAT'
+  - '#MENU_OPTION_HEADBOBBING'
+  - '#MENU_OPTION_gameMode'
+  - '#MENU_OPTION_VALUE_endless'
+  - '#MENU_OPTION_VALUE_story'
+  - '#MENU_OPTION_mouseLookSensibility'
+  - '#MENU_OPTION_padLookSensibility'
+  - '#LOADING'
+  - '#MENU_OPTION_GLITCH'
+  - '#MENU_SOLD'
+  data:
+  - OK
+  - CONFIRMER
+  - ANNULER
+  - RETOUR
+  - COMMENCER
+  - CHOISIR UNE ARME
+  - CHANGER D'ARME
+  - FERMER
+  - "R\xC9ESSAYER"
+  - MENU PRINCIPAL
+  - "R\xC9APPARA\xCETRE"
+  - INVENTAIRE
+  - VIDE
+  - ARME
+  - PAUSE
+  - NOUVELLE PARTIE
+  - "L\xC9GENDE"
+  - "Difficult\xE9 : Normal"
+  - "Difficult\xE9 : Cauchemar"
+  - CHARGER UNE PARTIE
+  - OPTIONS
+  - "CR\xC9DITS"
+  - NOUVELLE PARTIE
+  - CHARGER UNE PARTIE
+  - OPTIONS
+  - "OPTIONS VID\xC9O"
+  - OPTIONS AUDIO
+  - QUITTER
+  - QUITTER POUR REVENIR AU BUREAU
+  - Voulez-vous quitter le jeu ?
+  - VOLUME
+  - "PLEIN \xC9CRAN"
+  - "QUALIT\xC9"
+  - "R\xC9SOLUTION"
+  - "\xC9LEV\xC9E"
+  - NORMALE
+  - BASSE
+  - "VID\xC9O"
+  - AUDIO
+  - COMMANDES
+  - NOUVELLE PARTIE
+  - "Choisir la sauvegarde \xE0 charger"
+  - Oui
+  - Non
+  - "Voulez-vous \xE9craser la sauvegarde s\xE9lectionn\xE9e ? Toute la progression
+    sera perdue"
+  - OUI
+  - NON
+  - "R\xC9GLER LA LUMINOSIT\xC9"
+  - "LUMINOSIT\xC9"
+  - "Luminosit\xE9"
+  - Contraste
+  - LANGUE
+  - CHOISIR LA LANGUE
+  - ANGLAIS
+  - ITALIEN
+  - ALLEMAND
+  - "FRAN\xC7AIS"
+  - ESPAGNOL
+  - RUSSE
+  - PORTUGAIS
+  - CHINOIS
+  - HONGROIS
+  - 'Temps de jeu :'
+  - "Choisissez un emplacement pour cr\xE9er une nouvelle partie"
+  - Passer l'intro
+  - REPRENDRE
+  - Cycle
+  - SAUVEGARDER
+  - APPLIQUER
+  - REVENIR
+  - "R\xC9SOLUTION"
+  - "PLEIN \xC9CRAN"
+  - OUI
+  - NON
+  - PROFIL
+  - BAS
+  - MOYEN
+  - "\xC9LEV\xC9"
+  - "TR\xC8S \xC9LEV\xC9"
+  - ULTRA
+  - PERSONNALISER
+  - "QUALIT\xC9 GLOBALE"
+  - "LUMI\xC8RE VOLUM\xC9TRIQUE"
+  - "ACTIV\xC9"
+  - "D\xC9SACTIV\xC9"
+  - MOTION BLUR
+  - PROFONDEUR DE CHAMP
+  - EFFET FINAL
+  - "\xC9LEV\xC9"
+  - MOYEN
+  - BAS
+  - "ANTICR\xC9NELAGE"
+  - OMBRE
+  - OCCLUSION
+  - BLOOM
+  - "REFLET SUR \xC9CRAN"
+  - "QUALIT\xC9 DE TEXTURE"
+  - SYNCHRONISATION VERTICALE
+  - "Confirmer les modifications vid\xE9os ?"
+  - SOURDINE
+  - VOLUME PRINCIPAL
+  - MUSIQUE
+  - EFFETS SONORES
+  - INVERSER L'AXE Y
+  - "D\xC9SACTIVER LA VIBRATION DU PAD"
+  - "DIFFICULT\xC9"
+  - FACILE
+  - NORMALE
+  - DIFFICILE
+  - COMBAT RAPIDE
+  - "BALANCEMENT DE LA T\xCATE"
+  - MODE DE JEU
+  - MODE SANS FIN
+  - MODE HISTOIRE
+  - "SENSIBILIT\xC9 DE LA VUE (SOURIS)"
+  - "SENSIBILIT\xC9 DE LA VUE (MANETTE)"
+  - CHARGEMENT
+  - "P\xC9PIN EFFET"
+  - 

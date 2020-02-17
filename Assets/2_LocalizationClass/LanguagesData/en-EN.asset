@@ -14,3 +14,244 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   languageCode: en-EN
   iso: en
+  keys:
+  - '#BTN_OK'
+  - '#BTN_CONFIRM'
+  - '#BTN_CANCEL'
+  - '#BTN_BACK'
+  - '#BTN_START'
+  - '#BTN_SELECT_WEAPON'
+  - '#BTN_SWITCH_WEAPON'
+  - '#BTN_CLOSE'
+  - '#BTN_RETRY'
+  - '#BTN_EXIT'
+  - '#BTN_RESPAWN'
+  - '#TITLE_INVENTORY'
+  - '#SLOT_EMPTY'
+  - '#SLOT_WEAPON'
+  - '#TITLE_INGAMEPAUSE'
+  - '#MENU_NEWGAME'
+  - '#BTN_HELP'
+  - '#MODE_NORMAL'
+  - '#MODE_NIGHTMARE'
+  - '#MENU_LOADGAME'
+  - '#MENU_OPTIONS'
+  - '#MENU_CREDITS'
+  - '#MENU_TITLE_CREATEGAME'
+  - '#MENU_TITLE_LOADGAME'
+  - '#MENU_TITLE_OPTIONS'
+  - '#MENU_TITLE_VIDEO'
+  - '#MENU_TITLE_AUDIO'
+  - '#BTN_QUIT'
+  - '#BTN_QUIT_TO_DESKTOP'
+  - '#MENU_MSG_QUIT'
+  - '#MENU_OPT_VOLUME'
+  - '#MENU_OPT_FULLSCREEN'
+  - '#MENU_OPT_QUALITY'
+  - '#MENU_OPT_RESOLUTION'
+  - '#QUALITY_HIGH'
+  - '#QUALITY_NORMAL'
+  - '#QUALITY_LOW'
+  - '#MENU_VIDEO'
+  - '#MENU_AUDIO'
+  - '#MENU_CONTROLS'
+  - '#MENU_SLOTNEW'
+  - '#HELP_LOADSLOT'
+  - '#BTN_YES'
+  - '#BTN_NO'
+  - '#WARNING_SLOT_OVERWRITE'
+  - '#OPT_ON'
+  - '#OPT_OFF'
+  - '#MENU_TITLE_GAMMA'
+  - '#MENU_OPT_GAMMA'
+  - '#OPT_BRIGHTNESS'
+  - '#OPT_CONTRAST'
+  - '#MENU_OPTION_LANGUAGE'
+  - '#MENU_TITLE_LANGUAGE'
+  - '#LANG_EN'
+  - '#LANG_IT'
+  - '#LANG_DE'
+  - '#LANG_FR'
+  - '#LANG_ES'
+  - '#LANG_RU'
+  - '#LANG_PT'
+  - '#LANG_ZH'
+  - '#LANG_HU'
+  - '#LBL_PLAYINGTIME'
+  - '#HELP_NEWGAME'
+  - '#SKIP_VIDEO'
+  - '#BTN_RESUME'
+  - '#LBL_CYCLE'
+  - '#BTN_SAVE'
+  - '#BTN_APPLY'
+  - '#BTN_REVERT'
+  - '#MENU_OPTION_resolution'
+  - '#MENU_OPTION_fullscreen'
+  - '#MENU_OPTION_VALUE_yes'
+  - '#MENU_OPTION_VALUE_no'
+  - '#MENU_OPTION_profile'
+  - '#MENU_OPTION_VALUE_Low'
+  - '#MENU_OPTION_VALUE_Medium'
+  - '#MENU_OPTION_VALUE_High'
+  - '#MENU_OPTION_VALUE_VeryHigh'
+  - '#MENU_OPTION_VALUE_Ultra'
+  - '#MENU_OPTION_VALUE_Custom'
+  - '#MENU_OPTION_global'
+  - '#MENU_OPTION_volumetricLight'
+  - '#MENU_OPTION_VALUE_on'
+  - '#MENU_OPTION_VALUE_off'
+  - '#MENU_OPTION_motionBlur'
+  - '#MENU_OPTION_dof'
+  - '#MENU_OPTION_posteffect'
+  - '#MENU_OPTION_VALUE_high'
+  - '#MENU_OPTION_VALUE_medium'
+  - '#MENU_OPTION_VALUE_low'
+  - '#MENU_OPTION_antialiasing'
+  - '#MENU_OPTION_shadow'
+  - '#MENU_OPTION_occlusion'
+  - '#MENU_OPTION_bloom'
+  - '#MENU_OPTION_screenreflection'
+  - '#MENU_OPTION_texturequality'
+  - '#MENU_OPTION_vsync'
+  - '#MENU_OPTION_VERIFY'
+  - '#MENU_OPTION_mute'
+  - '#MENU_OPTION_mastervolume'
+  - '#MENU_OPTION_musicvolume'
+  - '#MENU_OPTION_sxvolume'
+  - '#MENU_OPTION_invertlook'
+  - '#MENU_OPTION_disableVibration'
+  - '#MENU_OPTION_gameDifficulty'
+  - '#MENU_OPTION_VALUE_easy'
+  - '#MENU_OPTION_VALUE_normal'
+  - '#MENU_OPTION_VALUE_hard'
+  - '#MENU_OPTION_FAST_COMBAT'
+  - '#MENU_OPTION_HEADBOBBING'
+  - '#MENU_OPTION_gameMode'
+  - '#MENU_OPTION_VALUE_endless'
+  - '#MENU_OPTION_VALUE_story'
+  - '#MENU_OPTION_mouseLookSensibility'
+  - '#MENU_OPTION_padLookSensibility'
+  - '#LOADING'
+  - '#MENU_OPTION_GLITCH'
+  - '#MENU_SOLD'
+  data:
+  - OK
+  - CONFIRM
+  - CANCEL
+  - BACK
+  - START
+  - SELECT WEAPON
+  - SWITCH WEAPON
+  - CLOSE
+  - RETRY
+  - MAIN MENU
+  - RESPAWN
+  - INVENTORY
+  - EMPTY
+  - WEAPON
+  - PAUSE
+  - NEW GAME
+  - LEGEND
+  - 'Difficulty: Normal'
+  - 'Difficulty: Nightmare'
+  - LOAD GAME
+  - OPTIONS
+  - CREDITS
+  - NEW GAME
+  - LOAD GAME
+  - OPTIONS
+  - VIDEO OPTIONS
+  - AUDIO OPTIONS
+  - QUIT
+  - QUIT TO DESKTOP
+  - Do you want to quit the game?
+  - VOLUME
+  - FULLSCREEN
+  - QUALITY
+  - RESOLUTION
+  - HIGH
+  - NORMAL
+  - LOW
+  - VIDEO
+  - AUDIO
+  - CONTROLS
+  - NEW GAME
+  - Select the slot to load
+  - Yes
+  - No
+  - Do you want to overwrite the selected slot data ? All the progression will be
+    lost
+  - ON
+  - OFF
+  - ADJUST BRIGHTNESS
+  - BRIGHTNESS
+  - Brightness
+  - Contrast
+  - LANGUAGE
+  - SELECT LANGUAGE
+  - ENGLISH
+  - ITALIAN
+  - GERMAN
+  - FRENCH
+  - SPANISH
+  - RUSSIAN
+  - PORTUGUESE
+  - CHINESE
+  - HUNGARIAN
+  - 'Playing time:'
+  - Select the slot to create a new game
+  - Skip Intro
+  - RESUME
+  - Cycle
+  - SAVE
+  - APPLY
+  - REVERT
+  - RESOLUTION
+  - FULLSCREEN
+  - YES
+  - NO
+  - PROFILE
+  - LOW
+  - MEDIUM
+  - HIGH
+  - VERY HIGH
+  - ULTRA
+  - CUSTOM
+  - GLOBAL QUALITY
+  - VOLUMETRIC LIGHT
+  - ON
+  - OFF
+  - MOTION BLUR
+  - DEPTH OF FIELD
+  - POST EFFECT
+  - HIGH
+  - MEDIUM
+  - LOW
+  - ANTIALIASING
+  - SHADOW
+  - AMBIENT OCCLUSION
+  - BLOOM
+  - SCREEN REFLECTION
+  - TEXTURE QUALITY
+  - VERTICAL SYNC
+  - Confirm video changes?
+  - MUTE
+  - MASTER VOLUME
+  - MUSIC
+  - SFX
+  - INVERT Y AXIS
+  - DISABLE PAD VIBRATION
+  - DIFFICULTY
+  - EASY
+  - NORMAL
+  - HARD
+  - FAST COMBAT
+  - HEADBOBBING
+  - GAME MODE
+  - ENDLESS MODE
+  - STORY MODE
+  - LOOK SENSITIVITY (MOUSE)
+  - LOOK SENSITIVITY (CONTROLLER)
+  - LOADING
+  - GLITCH EFFECT
+  - You earned {0:N0} cash

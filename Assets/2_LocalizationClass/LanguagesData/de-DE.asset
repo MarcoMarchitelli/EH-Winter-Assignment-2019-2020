@@ -14,3 +14,244 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   languageCode: de-DE
   iso: de
+  keys:
+  - '#BTN_OK'
+  - '#BTN_CONFIRM'
+  - '#BTN_CANCEL'
+  - '#BTN_BACK'
+  - '#BTN_START'
+  - '#BTN_SELECT_WEAPON'
+  - '#BTN_SWITCH_WEAPON'
+  - '#BTN_CLOSE'
+  - '#BTN_RETRY'
+  - '#BTN_EXIT'
+  - '#BTN_RESPAWN'
+  - '#TITLE_INVENTORY'
+  - '#SLOT_EMPTY'
+  - '#SLOT_WEAPON'
+  - '#TITLE_INGAMEPAUSE'
+  - '#MENU_NEWGAME'
+  - '#BTN_HELP'
+  - '#MODE_NORMAL'
+  - '#MODE_NIGHTMARE'
+  - '#MENU_LOADGAME'
+  - '#MENU_OPTIONS'
+  - '#MENU_CREDITS'
+  - '#MENU_TITLE_CREATEGAME'
+  - '#MENU_TITLE_LOADGAME'
+  - '#MENU_TITLE_OPTIONS'
+  - '#MENU_TITLE_VIDEO'
+  - '#MENU_TITLE_AUDIO'
+  - '#BTN_QUIT'
+  - '#BTN_QUIT_TO_DESKTOP'
+  - '#MENU_MSG_QUIT'
+  - '#MENU_OPT_VOLUME'
+  - '#MENU_OPT_FULLSCREEN'
+  - '#MENU_OPT_QUALITY'
+  - '#MENU_OPT_RESOLUTION'
+  - '#QUALITY_HIGH'
+  - '#QUALITY_NORMAL'
+  - '#QUALITY_LOW'
+  - '#MENU_VIDEO'
+  - '#MENU_AUDIO'
+  - '#MENU_CONTROLS'
+  - '#MENU_SLOTNEW'
+  - '#HELP_LOADSLOT'
+  - '#BTN_YES'
+  - '#BTN_NO'
+  - '#WARNING_SLOT_OVERWRITE'
+  - '#OPT_ON'
+  - '#OPT_OFF'
+  - '#MENU_TITLE_GAMMA'
+  - '#MENU_OPT_GAMMA'
+  - '#OPT_BRIGHTNESS'
+  - '#OPT_CONTRAST'
+  - '#MENU_OPTION_LANGUAGE'
+  - '#MENU_TITLE_LANGUAGE'
+  - '#LANG_EN'
+  - '#LANG_IT'
+  - '#LANG_DE'
+  - '#LANG_FR'
+  - '#LANG_ES'
+  - '#LANG_RU'
+  - '#LANG_PT'
+  - '#LANG_ZH'
+  - '#LANG_HU'
+  - '#LBL_PLAYINGTIME'
+  - '#HELP_NEWGAME'
+  - '#SKIP_VIDEO'
+  - '#BTN_RESUME'
+  - '#LBL_CYCLE'
+  - '#BTN_SAVE'
+  - '#BTN_APPLY'
+  - '#BTN_REVERT'
+  - '#MENU_OPTION_resolution'
+  - '#MENU_OPTION_fullscreen'
+  - '#MENU_OPTION_VALUE_yes'
+  - '#MENU_OPTION_VALUE_no'
+  - '#MENU_OPTION_profile'
+  - '#MENU_OPTION_VALUE_Low'
+  - '#MENU_OPTION_VALUE_Medium'
+  - '#MENU_OPTION_VALUE_High'
+  - '#MENU_OPTION_VALUE_VeryHigh'
+  - '#MENU_OPTION_VALUE_Ultra'
+  - '#MENU_OPTION_VALUE_Custom'
+  - '#MENU_OPTION_global'
+  - '#MENU_OPTION_volumetricLight'
+  - '#MENU_OPTION_VALUE_on'
+  - '#MENU_OPTION_VALUE_off'
+  - '#MENU_OPTION_motionBlur'
+  - '#MENU_OPTION_dof'
+  - '#MENU_OPTION_posteffect'
+  - '#MENU_OPTION_VALUE_high'
+  - '#MENU_OPTION_VALUE_medium'
+  - '#MENU_OPTION_VALUE_low'
+  - '#MENU_OPTION_antialiasing'
+  - '#MENU_OPTION_shadow'
+  - '#MENU_OPTION_occlusion'
+  - '#MENU_OPTION_bloom'
+  - '#MENU_OPTION_screenreflection'
+  - '#MENU_OPTION_texturequality'
+  - '#MENU_OPTION_vsync'
+  - '#MENU_OPTION_VERIFY'
+  - '#MENU_OPTION_mute'
+  - '#MENU_OPTION_mastervolume'
+  - '#MENU_OPTION_musicvolume'
+  - '#MENU_OPTION_sxvolume'
+  - '#MENU_OPTION_invertlook'
+  - '#MENU_OPTION_disableVibration'
+  - '#MENU_OPTION_gameDifficulty'
+  - '#MENU_OPTION_VALUE_easy'
+  - '#MENU_OPTION_VALUE_normal'
+  - '#MENU_OPTION_VALUE_hard'
+  - '#MENU_OPTION_FAST_COMBAT'
+  - '#MENU_OPTION_HEADBOBBING'
+  - '#MENU_OPTION_gameMode'
+  - '#MENU_OPTION_VALUE_endless'
+  - '#MENU_OPTION_VALUE_story'
+  - '#MENU_OPTION_mouseLookSensibility'
+  - '#MENU_OPTION_padLookSensibility'
+  - '#LOADING'
+  - '#MENU_OPTION_GLITCH'
+  - '#MENU_SOLD'
+  data:
+  - Okay
+  - "BEST\xC4TIGEN"
+  - ABBRECHEN
+  - "ZUR\xDCCK"
+  - START
+  - "WAFFE AUSW\xC4HLEN"
+  - WAFFE WECHSELN
+  - "SCHLIE\u1E9EEN"
+  - ERNEUT VERSUCHEN
+  - "HAUPTMEN\xDC"
+  - ERNEUT STARTEN
+  - INVENTAR
+  - LEER
+  - WAFFE
+  - PAUSE
+  - NEUES SPIEL
+  - LEGENDE
+  - 'Schwierigkeitsgrad: Normal'
+  - 'Schwierigkeitsgrad: Albtraum'
+  - SPIEL LADEN
+  - OPTIONEN
+  - MITWIRKENDE
+  - NEUES SPIEL
+  - SPIEL LADEN
+  - OPTIONEN
+  - VIDEO-OPTIONEN
+  - AUDIO-OPTIONEN
+  - BEENDEN
+  - "ZUR\xDCCK ZUM DESKTOP"
+  - Spiel beenden?
+  - "LAUTST\xC4RKE"
+  - VOLLBILD
+  - "QUALIT\xC4T"
+  - "AUFL\xD6SUNG"
+  - HOCH
+  - NORMAL
+  - NIEDRIG
+  - VIDEO
+  - AUDIO
+  - STEUERUNG
+  - NEUES SPIEL
+  - "Speicherplatz zum Laden ausw\xE4hlen"
+  - Ja
+  - Nein
+  - "Ausgew\xE4hlte Speicherplatzdaten \xFCberschreiben? Der gesamte Fortschritt geht
+    verloren."
+  - AN
+  - AUS
+  - HELLIGKEIT ANPASSEN
+  - HELLIGKEIT
+  - Helligkeit
+  - Kontrast
+  - SPRACHE
+  - "SPRACHE AUSW\xC4HLEN"
+  - ENGLISCH
+  - ITALIENISCH
+  - DEUTSCH
+  - "FRANZ\xD6SISCH"
+  - SPANISCH
+  - RUSSISCH
+  - PORTUGIESISCH
+  - CHINESISCH
+  - UNGARISCH
+  - 'Spielzeit:'
+  - "Speicherplatz f\xFCr ein neues Spiel ausw\xE4hlen"
+  - "Intro \xFCberspringen"
+  - FORTFAHREN
+  - Zyklus
+  - SPEICHERN
+  - ANWENDEN
+  - "ZUR\xDCCKSETZEN"
+  - "AUFL\xD6SUNG"
+  - VOLLBILD
+  - JA
+  - NEIN
+  - PROFIL
+  - NIEDRIG
+  - MITTEL
+  - HOCH
+  - SEHR HOCH
+  - ULTRA
+  - ANGEPASST
+  - "GLOBALE QUALIT\xC4T"
+  - VOLUMETRISCHES LICHT
+  - AN
+  - AUS
+  - "BEWEGUNGSUNSCH\xC4RFE"
+  - "SCH\xC4RFENTIEFE"
+  - POST-EFFEKT
+  - HOCH
+  - MITTEL
+  - NIEDRIG
+  - ANTIALIASING
+  - SCHATTEN
+  - VERDECKUNG
+  - "\xDCBERSTRAHLUNG"
+  - SCREEN-REFLECTION
+  - "TEXTURQUALIT\xC4T"
+  - V-SYNC
+  - "Grafik\xE4nderungen best\xE4tigen?"
+  - STUMM
+  - "GESAMTLAUTST\xC4RKE"
+  - MUSIK
+  - EFFEKTE
+  - Y-ACHSE UMKEHREN
+  - PAD-VIBRATION DEAKTIVIEREN
+  - SCHWIERIGKEIT
+  - EINFACH
+  - NORMAL
+  - SCHWER
+  - SCHNELLER KAMPF
+  - KOPFBEWEGUNG BEIM LAUFEN
+  - SPIELMODUS
+  - ENDLOS-MODUS
+  - STORY-MODUS
+  - KAMERAGESCHWINDIGKEIT (MAUS)
+  - KAMERAGESCHWINDIGKEIT (CONTROLLER)
+  - WIRD GELADEN
+  - GLITCHFILTER
+  - 

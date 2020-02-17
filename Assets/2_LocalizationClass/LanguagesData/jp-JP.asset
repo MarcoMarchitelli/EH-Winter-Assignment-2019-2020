@@ -14,3 +14,243 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   languageCode: jp-JP
   iso: jp
+  keys:
+  - '#BTN_OK'
+  - '#BTN_CONFIRM'
+  - '#BTN_CANCEL'
+  - '#BTN_BACK'
+  - '#BTN_START'
+  - '#BTN_SELECT_WEAPON'
+  - '#BTN_SWITCH_WEAPON'
+  - '#BTN_CLOSE'
+  - '#BTN_RETRY'
+  - '#BTN_EXIT'
+  - '#BTN_RESPAWN'
+  - '#TITLE_INVENTORY'
+  - '#SLOT_EMPTY'
+  - '#SLOT_WEAPON'
+  - '#TITLE_INGAMEPAUSE'
+  - '#MENU_NEWGAME'
+  - '#BTN_HELP'
+  - '#MODE_NORMAL'
+  - '#MODE_NIGHTMARE'
+  - '#MENU_LOADGAME'
+  - '#MENU_OPTIONS'
+  - '#MENU_CREDITS'
+  - '#MENU_TITLE_CREATEGAME'
+  - '#MENU_TITLE_LOADGAME'
+  - '#MENU_TITLE_OPTIONS'
+  - '#MENU_TITLE_VIDEO'
+  - '#MENU_TITLE_AUDIO'
+  - '#BTN_QUIT'
+  - '#BTN_QUIT_TO_DESKTOP'
+  - '#MENU_MSG_QUIT'
+  - '#MENU_OPT_VOLUME'
+  - '#MENU_OPT_FULLSCREEN'
+  - '#MENU_OPT_QUALITY'
+  - '#MENU_OPT_RESOLUTION'
+  - '#QUALITY_HIGH'
+  - '#QUALITY_NORMAL'
+  - '#QUALITY_LOW'
+  - '#MENU_VIDEO'
+  - '#MENU_AUDIO'
+  - '#MENU_CONTROLS'
+  - '#MENU_SLOTNEW'
+  - '#HELP_LOADSLOT'
+  - '#BTN_YES'
+  - '#BTN_NO'
+  - '#WARNING_SLOT_OVERWRITE'
+  - '#OPT_ON'
+  - '#OPT_OFF'
+  - '#MENU_TITLE_GAMMA'
+  - '#MENU_OPT_GAMMA'
+  - '#OPT_BRIGHTNESS'
+  - '#OPT_CONTRAST'
+  - '#MENU_OPTION_LANGUAGE'
+  - '#MENU_TITLE_LANGUAGE'
+  - '#LANG_EN'
+  - '#LANG_IT'
+  - '#LANG_DE'
+  - '#LANG_FR'
+  - '#LANG_ES'
+  - '#LANG_RU'
+  - '#LANG_PT'
+  - '#LANG_ZH'
+  - '#LANG_HU'
+  - '#LBL_PLAYINGTIME'
+  - '#HELP_NEWGAME'
+  - '#SKIP_VIDEO'
+  - '#BTN_RESUME'
+  - '#LBL_CYCLE'
+  - '#BTN_SAVE'
+  - '#BTN_APPLY'
+  - '#BTN_REVERT'
+  - '#MENU_OPTION_resolution'
+  - '#MENU_OPTION_fullscreen'
+  - '#MENU_OPTION_VALUE_yes'
+  - '#MENU_OPTION_VALUE_no'
+  - '#MENU_OPTION_profile'
+  - '#MENU_OPTION_VALUE_Low'
+  - '#MENU_OPTION_VALUE_Medium'
+  - '#MENU_OPTION_VALUE_High'
+  - '#MENU_OPTION_VALUE_VeryHigh'
+  - '#MENU_OPTION_VALUE_Ultra'
+  - '#MENU_OPTION_VALUE_Custom'
+  - '#MENU_OPTION_global'
+  - '#MENU_OPTION_volumetricLight'
+  - '#MENU_OPTION_VALUE_on'
+  - '#MENU_OPTION_VALUE_off'
+  - '#MENU_OPTION_motionBlur'
+  - '#MENU_OPTION_dof'
+  - '#MENU_OPTION_posteffect'
+  - '#MENU_OPTION_VALUE_high'
+  - '#MENU_OPTION_VALUE_medium'
+  - '#MENU_OPTION_VALUE_low'
+  - '#MENU_OPTION_antialiasing'
+  - '#MENU_OPTION_shadow'
+  - '#MENU_OPTION_occlusion'
+  - '#MENU_OPTION_bloom'
+  - '#MENU_OPTION_screenreflection'
+  - '#MENU_OPTION_texturequality'
+  - '#MENU_OPTION_vsync'
+  - '#MENU_OPTION_VERIFY'
+  - '#MENU_OPTION_mute'
+  - '#MENU_OPTION_mastervolume'
+  - '#MENU_OPTION_musicvolume'
+  - '#MENU_OPTION_sxvolume'
+  - '#MENU_OPTION_invertlook'
+  - '#MENU_OPTION_disableVibration'
+  - '#MENU_OPTION_gameDifficulty'
+  - '#MENU_OPTION_VALUE_easy'
+  - '#MENU_OPTION_VALUE_normal'
+  - '#MENU_OPTION_VALUE_hard'
+  - '#MENU_OPTION_FAST_COMBAT'
+  - '#MENU_OPTION_HEADBOBBING'
+  - '#MENU_OPTION_gameMode'
+  - '#MENU_OPTION_VALUE_endless'
+  - '#MENU_OPTION_VALUE_story'
+  - '#MENU_OPTION_mouseLookSensibility'
+  - '#MENU_OPTION_padLookSensibility'
+  - '#LOADING'
+  - '#MENU_OPTION_GLITCH'
+  - '#MENU_SOLD'
+  data:
+  - 
+  - CONFIRM
+  - "\u30AD\u30E3\u30F3\u30BB\u30EB"
+  - "\u30D0\u30C3\u30AF"
+  - "\u958B\u59CB"
+  - "\u6B66\u5668\u3092\u9078\u629E\u3057\u307E\u3059"
+  - "\u30B9\u30A4\u30C3\u30C1\u306E\u6B66\u5668"
+  - "\u9589\u3058\u308B"
+  - "\u30EA\u30C8\u30E9\u30A4"
+  - "\u30E1\u30A4\u30F3\u30E1\u30CB\u30E5\u30FC"
+  - "\u30EA\u30B9\u30DD\u30FC\u30F3"
+  - INVENTORY
+  - "\u7A7A\u306E"
+  - "\u6B66\u5668"
+  - PAUSE
+  - "\u65B0\u3057\u3044\u30B2\u30FC\u30E0"
+  - "\u4F1D\u8AAC"
+  - "\u96E3\u6613\u5EA6\uFF1A\u30CE\u30FC\u30DE\u30EB"
+  - "\u96E3\u6613\u5EA6\uFF1A\u30CA\u30A4\u30C8\u30E1\u30A2"
+  - "LOAD\u306EGAME"
+  - OPTIONS
+  - CREDITS
+  - "\u65B0\u3057\u3044\u30B2\u30FC\u30E0"
+  - "LOAD\u306EGAME"
+  - OPTIONS
+  - "\u30D3\u30C7\u30AA\u30AA\u30D7\u30B7\u30E7\u30F3"
+  - AUDIO OPTIONS
+  - "\u7D42\u4E86\u3059\u308B"
+  - 
+  - "\u3042\u306A\u305F\u304C\u30B2\u30FC\u30E0\u3092\u7D42\u4E86\u3057\u307E\u3059\u304B\uFF1F"
+  - "\u30DC\u30EA\u30E5\u30FC\u30E0"
+  - "\u5168\u753B\u9762\u8868\u793A"
+  - "\u54C1\u8CEA"
+  - "\u89E3\u6C7A"
+  - "\u9AD8\u3044"
+  - NORMAL
+  - LOW
+  - "\u30D3\u30C7\u30AA"
+  - "\u30AA\u30FC\u30C7\u30A3\u30AA"
+  - CONTROLS
+  - "\u65B0\u3057\u3044\u30B2\u30FC\u30E0"
+  - "\u30ED\u30FC\u30C9\u3059\u308B\u305F\u3081\u306B\u30B9\u30ED\u30C3\u30C8\u3092\u9078\u629E"
+  - "\u306F\u3044"
+  - "\u30CE\u30FC"
+  - "\u3042\u306A\u305F\u304C\u9078\u629E\u3057\u305F\u30B9\u30ED\u30C3\u30C8\u306E\u30C7\u30FC\u30BF\u3092\u4E0A\u66F8\u304D\u3057\u307E\u3059\u304B\uFF1F\u3059\u3079\u3066\u306E\u9032\u884C\u306F\u5931\u308F\u308C\u307E\u3059"
+  - "\u306B"
+  - "\u30AA\u30D5"
+  - "\u8F1D\u5EA6\u3092\u8ABF\u7BC0\u3057"
+  - "\u8F1D\u5EA6"
+  - "\u8F1D\u5EA6"
+  - "\u30B3\u30F3\u30C8\u30E9\u30B9\u30C8"
+  - "\u8A00\u8A9E"
+  - "\u8A00\u8A9E\u3092\u9078\u629E\u3059\u308B"
+  - "\u82F1\u8A9E"
+  - "\u30A4\u30BF\u30EA\u30A2\u306E"
+  - "\u30C9\u30A4\u30C4\u4EBA"
+  - "\u30D5\u30E9\u30F3\u30B9\u8A9E"
+  - SPANISH
+  - "\u30ED\u30B7\u30A2"
+  - PORTUGUESE
+  - CHINESE
+  - "\u30CF\u30F3\u30AC\u30EA\u30FC"
+  - "\u518D\u751F\u6642\u9593\uFF1A"
+  - "\u65B0\u3057\u3044\u30B2\u30FC\u30E0\u3092\u4F5C\u6210\u3059\u308B\u305F\u3081\u306B\u30B9\u30ED\u30C3\u30C8\u3092\u9078\u629E"
+  - "\u30A4\u30F3\u30C8\u30ED\u3092\u30B9\u30AD\u30C3\u30D7"
+  - "\u5C65\u6B74\u66F8"
+  - "\u30B5\u30A4\u30AF\u30EB"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
